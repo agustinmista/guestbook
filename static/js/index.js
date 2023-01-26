@@ -30,7 +30,8 @@ window.onload = function () {
   loadMessages();
 }
 
-messageForm.onsubmit = function () {
+messageForm.onsubmit = function (event) {
+  event.preventDefault();
   newMessage();
 }
 
