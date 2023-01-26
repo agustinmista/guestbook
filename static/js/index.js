@@ -23,7 +23,6 @@ async function newMessage() {
   let formJSON = JSON.stringify(Object.fromEntries(formData))
   let request = new Request("/new", { method: "POST", body: formJSON });
   await fetch(request);
-  loadMessages();
 }
 
 window.onload = function () {
@@ -33,5 +32,6 @@ window.onload = function () {
 messageForm.onsubmit = function (event) {
   event.preventDefault();
   newMessage();
+  loadMessages();
 }
 

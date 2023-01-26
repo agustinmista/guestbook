@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
   <title>The best guestbook in town</title>
@@ -8,27 +8,39 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="" />
 
+  <link rel="stylesheet" href="/css/pico.min.css">
 </head>
 
 <body>
-  <h1>The best guestbook in town</h1>
 
-  <section>
-    <h2>Testimonials</h2>
-    <ul id="message-board"></ul>
-  </section>
+  <header class="container">
+    <hgroup>
+      <h1>The best guestbook in town</h1>
+      <h2>(not really)</h2>
+    </hgroup>
+  </header>
 
-  <section>
-    <h2>Leave a message</h2>
-    <form id="new-message">
-      <label for="name">Your name:</label><br>
-      <input type="text" id="author" name="author"><br>
-      <label for="content">Your message:</label><br>
-      <input type="text" id="content" name="content">
-      <br />
-      <input type="submit" value="Send">
-    </form>
-  </section>
+  <main class="container">
+    <article>
+      <h3>Previous messages</h3>
+      <ul id="message-board"></ul>
+    </article>
+
+    <article>
+      <h3>Leave a message</h3>
+      <form id="new-message">
+        <label for="name">Your name:</label>
+        <input type="text" id="author" name="author" required>
+        <label for="content">Your message:</label>
+        <input type="text" id="content" name="content" required>
+        <input type="submit" value="Send">
+      </form>
+    </article>
+  </main>
+
+  <footer class="container">
+    <small>What are you looking for here?</small>
+  </footer>
 
   <script src="js/index.js"></script>
 </body>
